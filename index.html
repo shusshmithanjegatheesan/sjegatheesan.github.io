@@ -15,8 +15,8 @@
 
     header {
       background-color: #111827;
-      color: orange;
-      padding: 60px 20px;
+      color: white;
+      padding: 70px 20px 60px 20px;
       text-align: center;
     }
 
@@ -31,10 +31,27 @@
       color: #d1d5db;
     }
 
+    .button-row {
+      margin-top: 25px;
+    }
+
+    .button-row a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: white;
+      color: #111827;
+    }
+
     nav {
       background-color: #1f2937;
       text-align: center;
       padding: 15px 10px;
+      position: sticky;
+      top: 0;
     }
 
     nav a {
@@ -45,8 +62,8 @@
     }
 
     section {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 950px;
+      margin: 35px auto;
       background: white;
       padding: 30px;
       border-radius: 12px;
@@ -56,13 +73,26 @@
     h2 {
       color: #111827;
       margin-top: 0;
+      margin-bottom: 15px;
     }
 
-    .project {
-      margin-bottom: 25px;
+    h3 {
+      margin-bottom: 6px;
     }
 
-    .skills span {
+    .entry {
+      margin-bottom: 28px;
+    }
+
+    .entry p {
+      margin: 4px 0;
+    }
+
+    .muted {
+      color: #6b7280;
+    }
+
+    .skills span, .languages span {
       display: inline-block;
       background-color: #e5e7eb;
       padding: 8px 14px;
@@ -76,6 +106,26 @@
       padding: 30px 20px;
       color: #6b7280;
     }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 34px;
+      }
+
+      header p {
+        font-size: 17px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 10px;
+      }
+
+      section {
+        margin: 20px 14px;
+        padding: 22px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -83,11 +133,18 @@
   <header>
     <h1>Shushmithan Jegatheesan</h1>
     <p>Mechanical Engineering Student at ETH Zurich</p>
+    <div class="button-row">
+      <a href="mailto:sjegatheesan@ethz.ch">Email Me</a>
+      <a href="https://www.linkedin.com/in/shusshmithan-jegatheesan-001407330/" target="_blank">LinkedIn</a>
+      <a href="CV_e.pdf" target="_blank">CV</a>
+      <a href="Shusshmithan_Jegatheesan_Leistungsueberblick.pdf" target="_blank">Transcript</a>
+    </div>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -95,42 +152,61 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a Mechanical Engineering student at ETH Zurich with a strong interest in robotics,
-      control, mechatronics, and practical engineering problem solving. I enjoy working on projects
-      where theory and real-world applications come together.
+      I am a Bachelor's student in Mechanical Engineering at ETH Zurich with a strong interest in
+      mechanics, robotics, control, and practical engineering problem solving.
     </p>
     <p>
-      I am especially motivated by technical challenges that require analytical thinking,
-      structured work, and curiosity. Through my studies and projects, I want to build a strong
-      foundation for contributing to innovative engineering solutions.
+      I enjoy working on technical challenges where analytical thinking and real-world application
+      come together. Through my studies and practical experience, I am continuously developing my
+      skills in engineering analysis, modelling, and structured problem solving.
+    </p>
+    <p>
+      My academic background includes subjects such as mechanics, thermodynamics, fluid dynamics,
+      control systems, machine design, and machine learning, which I aim to connect with hands-on
+      engineering work and future projects.
     </p>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+  <section id="experience">
+    <h2>Experience</h2>
 
-    <div class="project">
-      <h3>Autonomous Robot Project</h3>
+    <div class="entry">
+      <h3>Structural Mechanics Engineer</h3>
+      <p><strong>ARIS</strong> · Freelance</p>
+      <p class="muted">October 2024 – Present · Zurich, Switzerland</p>
       <p>
-        Worked on sensor-based robot control, positioning, and line-following tasks using embedded systems
-        and engineering logic.
+        Contribute to structural mechanics work in a practical engineering environment and gain
+        hands-on experience with technical problem solving and engineering collaboration.
       </p>
     </div>
 
-    <div class="project">
-      <h3>Machine Learning and Computer Vision</h3>
+    <div class="entry">
+      <h3>Teacher Assistant</h3>
+      <p><strong>Sekundarschule Herzogenmühle</strong> · Part-time</p>
+      <p class="muted">August 2025 – Present · Zurich, Switzerland</p>
       <p>
-        Developed models for image-based tasks and learned how data-driven methods can be used
-        to solve engineering problems.
+        Support students during lessons, provide individual academic assistance, and help explain
+        concepts clearly in a structured learning environment.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="entry">
+      <h3>ETH Zurich</h3>
+      <p><strong>Bachelor of Science in Mechanical Engineering</strong></p>
+      <p class="muted">September 2023 – 2026</p>
+      <p>
+        Focus in design, mechanics, and manufacturing.
       </p>
     </div>
 
-    <div class="project">
-      <h3>Engineering Simulations and Analysis</h3>
-      <p>
-        Applied engineering fundamentals to technical problems involving mechanics, system behavior,
-        and structured problem solving.
-      </p>
+    <div class="entry">
+      <h3>MNG Rämibühl Zurich</h3>
+      <p><strong>Matura</strong> · Focus in Applied Mathematics &amp; Physics</p>
+      <p class="muted">July 2019 – July 2023</p>
     </div>
   </section>
 
@@ -138,21 +214,31 @@
     <h2>Skills</h2>
     <div class="skills">
       <span>Python</span>
-      <span>MATLAB</span>
-      <span>CAD</span>
-      <span>Robotics</span>
+      <span>C++</span>
+      <span>Microsoft Office</span>
+      <span>Mechanics</span>
       <span>Control Systems</span>
+      <span>Fluid Dynamics</span>
+      <span>Thermodynamics</span>
       <span>Machine Learning</span>
-      <span>Data Analysis</span>
+      <span>Engineering Analysis</span>
       <span>Problem Solving</span>
+    </div>
+
+    <h2 style="margin-top:30px;">Languages</h2>
+    <div class="languages">
+      <span>German (native)</span>
+      <span>Tamil (native)</span>
+      <span>English (fluent, FCE)</span>
+      <span>French (basic)</span>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: your-linkedin-profile</p>
-    <p>GitHub: shushmithanjegatheesan.github.io</p>
+    <p><strong>Email:</strong> <a href="mailto:sjegatheesan@ethz.ch">sjegatheesan@ethz.ch</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shusshmithan-jegatheesan-001407330/" target="_blank">shusshmithan-jegatheesan</a></p>
+    <p><strong>Website:</strong> <a href="https://shushmithanjegatheesan.github.io/sjegatheesan.github.io/" target="_blank">GitHub Pages Portfolio</a></p>
   </section>
 
   <footer>
