@@ -16,8 +16,11 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #eef2f7;
-      color: #1f2937;
+      background:
+        radial-gradient(circle at top left, rgba(59,130,246,0.10), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(16,185,129,0.08), transparent 30%),
+        #0b1120;
+      color: #e5e7eb;
       line-height: 1.6;
     }
 
@@ -27,16 +30,16 @@
     }
 
     .container {
-      width: min(1100px, calc(100% - 32px));
+      width: min(1150px, calc(100% - 32px));
       margin: 0 auto;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(8px);
       z-index: 100;
+      background: rgba(11, 17, 32, 0.82);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -45,12 +48,14 @@
       justify-content: space-between;
       align-items: center;
       padding: 16px 0;
+      gap: 20px;
     }
 
     .brand {
-      color: white;
-      font-weight: bold;
       font-size: 20px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.3px;
     }
 
     .nav-links {
@@ -60,60 +65,76 @@
     }
 
     .nav-links a {
-      color: #dbe4f0;
-      font-weight: 600;
+      color: #cbd5e1;
       font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
     }
 
     .hero {
-      padding: 80px 0 50px 0;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
+      padding: 80px 0 55px 0;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.4fr 0.9fr;
-      gap: 28px;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 32px;
       align-items: center;
     }
 
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.25);
+      color: #93c5fd;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
     .hero-text h1 {
-      font-size: 52px;
-      line-height: 1.05;
       margin: 0 0 16px 0;
+      font-size: 56px;
+      line-height: 1.02;
+      color: white;
     }
 
     .hero-text p {
-      font-size: 18px;
-      color: #dbe4f0;
       max-width: 700px;
-      margin-bottom: 24px;
+      font-size: 18px;
+      color: #cbd5e1;
+      margin-bottom: 26px;
     }
 
     .button-row {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 12px;
     }
 
     .btn {
       display: inline-block;
       padding: 12px 18px;
       border-radius: 12px;
-      font-weight: bold;
+      font-weight: 700;
       transition: 0.2s ease;
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .btn-primary {
-      background: white;
-      color: #111827;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: white;
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.12);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.04);
+      color: #e5e7eb;
     }
 
     .btn:hover {
@@ -121,25 +142,38 @@
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
       padding: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.22);
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto 22px auto;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: #111827;
     }
 
     .hero-card h3 {
-      margin-top: 0;
-      margin-bottom: 14px;
+      margin: 0 0 14px 0;
+      color: white;
       font-size: 22px;
     }
 
     .hero-card p {
-      color: #dbe4f0;
       margin: 8px 0;
+      color: #cbd5e1;
     }
 
     main {
-      padding: 36px 0 50px 0;
+      padding-bottom: 50px;
     }
 
     section {
@@ -147,28 +181,23 @@
     }
 
     .card {
-      background: white;
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.14);
     }
 
     .section-title {
       margin-top: 0;
       margin-bottom: 18px;
       font-size: 30px;
-      color: #111827;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      color: white;
     }
 
     .entry {
       padding: 18px 0;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .entry:last-child {
@@ -179,6 +208,7 @@
     .entry h3 {
       margin: 0 0 6px 0;
       font-size: 22px;
+      color: #f8fafc;
     }
 
     .entry p {
@@ -186,48 +216,69 @@
     }
 
     .muted {
-      color: #6b7280;
+      color: #94a3b8;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
     }
 
     .tag-list {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
     .tag {
-      background: #e8eef7;
-      color: #1f2937;
+      display: inline-block;
       padding: 9px 14px;
       border-radius: 999px;
+      background: rgba(59,130,246,0.10);
+      border: 1px solid rgba(59,130,246,0.22);
+      color: #dbeafe;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .contact-links p {
       margin: 10px 0;
       font-size: 17px;
+      color: #e5e7eb;
+    }
+
+    .contact-links a {
+      color: #93c5fd;
+    }
+
+    .contact-links a:hover {
+      color: #bfdbfe;
     }
 
     footer {
       text-align: center;
-      color: #6b7280;
-      padding: 20px 0 40px 0;
+      color: #94a3b8;
+      padding: 10px 0 40px 0;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 920px) {
       .hero-grid,
       .grid-2 {
         grid-template-columns: 1fr;
       }
 
       .hero-text h1 {
-        font-size: 40px;
+        font-size: 42px;
       }
 
       .nav-inner {
         flex-direction: column;
-        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .profile-photo {
+        max-width: 280px;
       }
     }
 
@@ -237,14 +288,15 @@
       }
 
       .hero-text h1 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       .section-title {
-        font-size: 24px;
+        font-size: 25px;
       }
 
-      .card {
+      .card,
+      .hero-card {
         padding: 22px;
       }
     }
@@ -268,10 +320,11 @@
   <header class="hero">
     <div class="container hero-grid">
       <div class="hero-text">
-        <h1>Mechanical Engineering Student at ETH Zurich</h1>
+        <div class="eyebrow">ETH Zurich · Mechanical Engineering</div>
+        <h1>Engineering with a focus on mechanics, control, and robotics.</h1>
         <p>
-          I am Shushmithan Jegatheesan, a Bachelor's student with a strong interest in
-          mechanics, control, robotics, and practical engineering problem solving.
+          I am Shushmithan Jegatheesan, a Bachelor's student in Mechanical Engineering at ETH Zurich
+          with a strong interest in practical problem solving, analytical thinking, and hands-on technical work.
         </p>
         <div class="button-row">
           <a class="btn btn-primary" href="mailto:sjegatheesan@ethz.ch">Email Me</a>
@@ -282,9 +335,10 @@
       </div>
 
       <div class="hero-card">
+        <img src="cv_Photo.jpg" alt="Portrait of Shushmithan Jegatheesan" class="profile-photo">
         <h3>Quick Profile</h3>
         <p><strong>Name:</strong> Shushmithan Jegatheesan</p>
-        <p><strong>Study:</strong> BSc Mechanical Engineering</p>
+        <p><strong>Degree:</strong> BSc Mechanical Engineering</p>
         <p><strong>University:</strong> ETH Zurich</p>
         <p><strong>Focus:</strong> Mechanics, Control, Robotics</p>
         <p><strong>Location:</strong> Zurich, Switzerland</p>
@@ -302,14 +356,14 @@
           mechanics, robotics, control, and practical engineering problem solving.
         </p>
         <p>
-          I enjoy working on technical challenges where analytical thinking and real-world application
-          come together. Through my studies and practical experience, I am continuously developing my
-          skills in engineering analysis, modelling, and structured problem solving.
+          I enjoy technical challenges where theory and real-world application come together. Through
+          my studies and practical work, I am continuously building my skills in engineering analysis,
+          modelling, and structured problem solving.
         </p>
         <p>
           My academic background includes mechanics, thermodynamics, fluid dynamics, control systems,
           machine design, and machine learning, and I am especially motivated by projects that connect
-          theory with hands-on engineering work.
+          engineering fundamentals with hands-on implementation.
         </p>
       </div>
     </section>
@@ -333,21 +387,21 @@
           <p><strong>Sekundarschule Herzogenmühle</strong> · Part-time</p>
           <p class="muted">August 2025 – Present · Zurich, Switzerland</p>
           <p>
-            Support students during lessons, provide individual academic assistance, and help explain
+            Support students during lessons, provide individual academic assistance, and explain
             concepts clearly in a structured learning environment.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="education">
-      <div class="card">
+    <section class="grid-2">
+      <div class="card" id="education">
         <h2 class="section-title">Education</h2>
 
         <div class="entry">
           <h3>ETH Zurich</h3>
           <p><strong>Bachelor of Science in Mechanical Engineering</strong></p>
-          <p class="muted">September 2023 – present</p>
+          <p class="muted">September 2023 – 2026</p>
           <p>Focus in design, mechanics, and manufacturing.</p>
         </div>
 
@@ -357,31 +411,29 @@
           <p class="muted">July 2019 – July 2023</p>
         </div>
       </div>
-    </section>
 
-    <section id="skills">
-      <div class="card">
-        <h2 class="section-title">Skills & Languages</h2>
+      <div class="card" id="skills">
+        <h2 class="section-title">Skills</h2>
 
         <h3>Technical Skills</h3>
         <div class="tag-list" style="margin-bottom: 24px;">
           <span class="tag">Python</span>
           <span class="tag">C++</span>
-          <span class="tag">Microsoft Office</span>
           <span class="tag">Mechanics</span>
           <span class="tag">Control Systems</span>
           <span class="tag">Fluid Dynamics</span>
           <span class="tag">Thermodynamics</span>
           <span class="tag">Machine Learning</span>
-          <span class="tag">Problem Solving</span>
+          <span class="tag">Engineering Analysis</span>
+          <span class="tag">Microsoft Office</span>
         </div>
 
         <h3>Languages</h3>
         <div class="tag-list">
-          <span class="tag">German (native)</span>
-          <span class="tag">Tamil (native)</span>
-          <span class="tag">English (fluent)</span>
-          <span class="tag">French (basic)</span>
+          <span class="tag">German</span>
+          <span class="tag">Tamil</span>
+          <span class="tag">English</span>
+          <span class="tag">French</span>
         </div>
       </div>
     </section>
