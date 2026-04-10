@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shushmithan Jegatheesan | Portfolio</title>
+  <title>Shushmithan Jegatheesan | Engineering Portfolio</title>
+
   <style>
+    :root {
+      --bg: #07111f;
+      --bg-secondary: #0d1728;
+      --panel: rgba(10, 18, 32, 0.78);
+      --panel-strong: rgba(13, 23, 40, 0.95);
+      --border: rgba(120, 160, 255, 0.15);
+      --text: #e6edf7;
+      --muted: #98a7bd;
+      --blue: #4ea1ff;
+      --cyan: #59f0ff;
+      --green: #5ff2ae;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --maxw: 1180px;
+    }
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -14,13 +33,16 @@
     }
 
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(59,130,246,0.10), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(16,185,129,0.08), transparent 30%),
-        #0b1120;
-      color: #e5e7eb;
+        radial-gradient(circle at 15% 20%, rgba(78, 161, 255, 0.13), transparent 22%),
+        radial-gradient(circle at 85% 18%, rgba(89, 240, 255, 0.10), transparent 20%),
+        radial-gradient(circle at 75% 80%, rgba(95, 242, 174, 0.08), transparent 22%),
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, auto, auto, 42px 42px, 42px 42px, auto;
       line-height: 1.6;
     }
 
@@ -30,43 +52,53 @@
     }
 
     .container {
-      width: min(1150px, calc(100% - 32px));
+      width: min(var(--maxw), calc(100% - 32px));
       margin: 0 auto;
     }
 
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(11, 17, 32, 0.82);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 999;
+      background: rgba(7, 17, 31, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .nav-inner {
+      min-height: 74px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 0;
       gap: 20px;
     }
 
     .brand {
-      font-size: 20px;
-      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
       color: white;
-      letter-spacing: 0.3px;
+    }
+
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      box-shadow: 0 0 18px rgba(89, 240, 255, 0.75);
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 18px;
     }
 
     .nav-links a {
-      color: #cbd5e1;
-      font-size: 15px;
+      color: #c9d4e5;
+      font-size: 14px;
       font-weight: 600;
       transition: 0.2s ease;
     }
@@ -76,39 +108,66 @@
     }
 
     .hero {
-      padding: 80px 0 55px 0;
+      padding: 80px 0 42px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
-      gap: 32px;
-      align-items: center;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(78, 161, 255, 0.06), transparent 35%, rgba(95, 242, 174, 0.04));
+      pointer-events: none;
+    }
+
+    .hero-left,
+    .hero-right {
+      padding: 34px;
     }
 
     .eyebrow {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(59,130,246,0.12);
-      border: 1px solid rgba(59,130,246,0.25);
-      color: #93c5fd;
-      font-size: 14px;
+      border: 1px solid rgba(89, 240, 255, 0.22);
+      background: rgba(89, 240, 255, 0.08);
+      color: #b8f7ff;
+      font-size: 13px;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
     }
 
-    .hero-text h1 {
-      margin: 0 0 16px 0;
-      font-size: 56px;
+    h1 {
+      font-size: 58px;
       line-height: 1.02;
+      margin-bottom: 18px;
       color: white;
+      max-width: 700px;
     }
 
-    .hero-text p {
-      max-width: 700px;
+    .hero-subtext {
+      color: #c3cfdf;
       font-size: 18px;
-      color: #cbd5e1;
+      max-width: 760px;
       margin-bottom: 26px;
     }
 
@@ -116,88 +175,275 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-bottom: 28px;
     }
 
     .btn {
-      display: inline-block;
       padding: 12px 18px;
       border-radius: 12px;
       font-weight: 700;
+      font-size: 15px;
       transition: 0.2s ease;
       border: 1px solid rgba(255,255,255,0.08);
+      display: inline-block;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      background: linear-gradient(135deg, var(--blue), #2b6df6);
       color: white;
+      box-shadow: 0 10px 24px rgba(43, 109, 246, 0.24);
     }
 
     .btn-secondary {
       background: rgba(255,255,255,0.04);
-      color: #e5e7eb;
+      color: var(--text);
     }
 
     .btn:hover {
       transform: translateY(-2px);
     }
 
-    .hero-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.22);
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .stat-card {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .stat-card h3 {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .stat-card p {
+      font-size: 13px;
+      color: var(--muted);
     }
 
     .profile-photo {
       width: 100%;
-      max-width: 320px;
+      max-width: 290px;
       aspect-ratio: 4 / 5;
       object-fit: cover;
-      border-radius: 20px;
+      border-radius: 18px;
+      margin: 0 auto 20px auto;
       display: block;
-      margin: 0 auto 22px auto;
       border: 1px solid rgba(255,255,255,0.12);
-      background: #111827;
+      background: #101827;
     }
 
-    .hero-card h3 {
-      margin: 0 0 14px 0;
-      color: white;
+    .right-title {
       font-size: 22px;
+      color: white;
+      margin-bottom: 16px;
     }
 
-    .hero-card p {
-      margin: 8px 0;
-      color: #cbd5e1;
+    .mini-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-item {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .mini-item .label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 4px;
+    }
+
+    .mini-item .value {
+      font-weight: 700;
+      color: #f4f8ff;
     }
 
     main {
-      padding-bottom: 50px;
+      padding-bottom: 60px;
     }
 
     section {
-      margin-bottom: 26px;
+      margin-top: 28px;
     }
 
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
+    .section-panel {
       padding: 30px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.14);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .section-label {
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
     }
 
     .section-title {
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: 30px;
+      font-size: 34px;
       color: white;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .about-text {
+      max-width: 920px;
+      color: #cfdae8;
+      font-size: 17px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .project-card {
+      padding: 24px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(89, 240, 255, 0.20);
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 14px;
+    }
+
+    .project-title {
+      font-size: 22px;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .project-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .project-badge {
+      white-space: nowrap;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #d9f8ff;
+      background: rgba(89, 240, 255, 0.08);
+      border: 1px solid rgba(89, 240, 255, 0.18);
+    }
+
+    .project-block {
+      margin-top: 14px;
+    }
+
+    .project-block h4 {
+      font-size: 13px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      margin-bottom: 6px;
+    }
+
+    .project-block p,
+    .project-block ul {
+      color: #d4deec;
+      font-size: 15px;
+    }
+
+    .project-block ul {
+      padding-left: 18px;
+    }
+
+    .project-block li {
+      margin-bottom: 6px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(78, 161, 255, 0.08);
+      border: 1px solid rgba(78, 161, 255, 0.18);
+      color: #d8eaff;
+    }
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+    }
+
+    .skills-box {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .skills-box h3 {
+      color: white;
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+
+    .skills-box p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
     }
 
     .entry {
       padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .entry:last-child {
@@ -206,97 +452,97 @@
     }
 
     .entry h3 {
-      margin: 0 0 6px 0;
-      font-size: 22px;
-      color: #f8fafc;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .entry .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
     }
 
     .entry p {
-      margin: 5px 0;
+      color: #d3deeb;
     }
 
-    .muted {
-      color: #94a3b8;
-    }
-
-    .grid-2 {
+    .contact-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    .contact-card {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
-    .tag {
-      display: inline-block;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(59,130,246,0.10);
-      border: 1px solid rgba(59,130,246,0.22);
-      color: #dbeafe;
-      font-size: 14px;
-      font-weight: 700;
+    .contact-card h3 {
+      color: white;
+      margin-bottom: 8px;
+      font-size: 18px;
     }
 
-    .contact-links p {
-      margin: 10px 0;
-      font-size: 17px;
-      color: #e5e7eb;
+    .contact-card p,
+    .contact-card a {
+      color: var(--muted);
+      word-break: break-word;
     }
 
-    .contact-links a {
-      color: #93c5fd;
-    }
-
-    .contact-links a:hover {
-      color: #bfdbfe;
+    .contact-card a:hover {
+      color: white;
     }
 
     footer {
       text-align: center;
-      color: #94a3b8;
-      padding: 10px 0 40px 0;
+      color: var(--muted);
+      padding: 10px 0 36px;
+      font-size: 14px;
     }
 
-    @media (max-width: 920px) {
+    @media (max-width: 1020px) {
       .hero-grid,
-      .grid-2 {
+      .projects-grid,
+      .skills-layout,
+      .two-col,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-text h1 {
-        font-size: 42px;
+      h1 {
+        font-size: 44px;
       }
 
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .profile-photo {
-        max-width: 280px;
+      .hero-stats {
+        grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
       .hero {
         padding-top: 56px;
       }
 
-      .hero-text h1 {
+      h1 {
         font-size: 34px;
       }
 
       .section-title {
-        font-size: 25px;
+        font-size: 28px;
       }
 
-      .card,
-      .hero-card {
+      .hero-left,
+      .hero-right,
+      .section-panel {
         padding: 22px;
       }
     }
@@ -306,12 +552,16 @@
 
   <nav>
     <div class="container nav-inner">
-      <div class="brand">Shushmithan Jegatheesan</div>
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Shushmithan Jegatheesan</span>
+      </div>
+
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#background">Background</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -319,131 +569,404 @@
 
   <header class="hero">
     <div class="container hero-grid">
-      <div class="hero-text">
-        <div class="eyebrow">ETH Zurich · Mechanical Engineering</div>
-        <h1>Engineering with a focus on Design,Mechanics and Manufactoring.</h1>
-        <p>
-          I am Shushmithan Jegatheesan, a Bachelor's student in Mechanical Engineering at ETH Zurich
-          with a strong interest in practical problem solving, analytical thinking, and hands-on technical work.
+
+      <div class="panel hero-left">
+        <div class="eyebrow">ETH Zurich · Mechanical Engineering · Portfolio</div>
+        <h1>Building engineering projects that connect theory, code and hands-on problem solving.</h1>
+        <p class="hero-subtext">
+          I am a Mechanical Engineering student at ETH Zurich with a strong interest in robotics,
+          mechanics, control, simulation and technical development. I enjoy working on projects where
+          analytical thinking meets real implementation — from coding and modelling to testing and design.
         </p>
+
         <div class="button-row">
-          <a class="btn btn-primary" href="mailto:sjegatheesan@ethz.ch">Email Me</a>
+          <a class="btn btn-primary" href="mailto:sjegatheesan@ethz.ch">Contact Me</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/shusshmithan-jegatheesan-001407330/" target="_blank">LinkedIn</a>
           <a class="btn btn-secondary" href="CV_e.pdf" target="_blank">CV</a>
           <a class="btn btn-secondary" href="Shusshmithan_Jegatheesan_Leistungsueberblick.pdf" target="_blank">Transcript</a>
         </div>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <h3>Projects</h3>
+            <p>Engineering, coding and applied technical work</p>
+          </div>
+          <div class="stat-card">
+            <h3>Focus</h3>
+            <p>Mechanics, control, robotics and manufacturing</p>
+          </div>
+          <div class="stat-card">
+            <h3>Approach</h3>
+            <p>Structured, hands-on and problem-solving oriented</p>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-card">
+      <div class="panel hero-right">
         <img src="cv PHOTO.jpg" alt="Portrait of Shushmithan Jegatheesan" class="profile-photo">
-        <h3>Quick Profile</h3>
-        <p><strong>Name:</strong> Shushmithan Jegatheesan</p>
-        <p><strong>Degree:</strong> BSc Mechanical Engineering</p>
-        <p><strong>University:</strong> ETH Zurich</p>
-        <p><strong>Focus:</strong> Mechanics, Control, Robotics</p>
-        <p><strong>Location:</strong> Zurich, Switzerland</p>
+
+        <h2 class="right-title">Profile Snapshot</h2>
+
+        <div class="mini-grid">
+          <div class="mini-item">
+            <span class="label">Degree</span>
+            <span class="value">BSc Mechanical Engineering</span>
+          </div>
+          <div class="mini-item">
+            <span class="label">University</span>
+            <span class="value">ETH Zurich</span>
+          </div>
+          <div class="mini-item">
+            <span class="label">Main Interests</span>
+            <span class="value">Mechanics, Robotics, Control, Simulation</span>
+          </div>
+          <div class="mini-item">
+            <span class="label">Location</span>
+            <span class="value">Zurich, Switzerland</span>
+          </div>
+        </div>
       </div>
+
     </div>
   </header>
 
   <main class="container">
 
     <section id="about">
-      <div class="card">
-        <h2 class="section-title">About Me</h2>
-        <p>
-          I am a Bachelor's student in Mechanical Engineering at ETH Zurich with a strong interest in
-          mechanics, robotics, control, and practical engineering problem solving.
-        </p>
-        <p>
-          I enjoy technical challenges where theory and real-world application come together. Through
-          my studies and practical work, I am continuously building my skills in engineering analysis,
-          modelling, and structured problem solving.
-        </p>
-        <p>
-          My academic background includes mechanics, thermodynamics, fluid dynamics, control systems,
-          machine design, and machine learning, and I am especially motivated by projects that connect
-          engineering fundamentals with hands-on implementation.
+      <div class="panel section-panel">
+        <div class="section-header">
+          <div>
+            <div class="section-label">About</div>
+            <h2 class="section-title">Who I am</h2>
+          </div>
+        </div>
+
+        <p class="about-text">
+          I am especially interested in technical projects where I can understand a system deeply and
+          then improve it through analysis, design and implementation. What motivates me most is not
+          only learning theory, but using it in a real engineering context. That is why I enjoy working
+          on projects involving modelling, programming, mechanics, testing and iterative problem solving.
+          I want this portfolio to show not only what I studied, but also how I approach technical work
+          and what I learned from building things.
         </p>
       </div>
     </section>
 
-    <section id="experience">
-      <div class="card">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="entry">
-          <h3>Structural Mechanics Engineer</h3>
-          <p><strong>ARIS</strong> · Freelance</p>
-          <p class="muted">October 2024 – Present · Zurich, Switzerland</p>
-          <p>
-            Contribute to structural mechanics work in a practical engineering environment and gain
-            hands-on experience with technical problem solving and engineering collaboration.
+    <section id="projects">
+      <div class="panel section-panel">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Main Section</div>
+            <h2 class="section-title">Projects</h2>
+          </div>
+          <p class="section-description">
+            A selection of projects that reflect my technical interests and how I work: understanding systems,
+            solving concrete problems, and learning new tools through implementation.
           </p>
         </div>
 
-        <div class="entry">
-          <h3>Teacher Assistant</h3>
-          <p><strong>Sekundarschule Herzogenmühle</strong> · Part-time</p>
-          <p class="muted">August 2025 – Present · Zurich, Switzerland</p>
-          <p>
-            Support students during lessons, provide individual academic assistance, and explain
-            concepts clearly in a structured learning environment.
-          </p>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">Autonomous Line-Following Robot</h3>
+                <p class="project-subtitle">Robotics · Sensors · Control · Arduino</p>
+              </div>
+              <span class="project-badge">Robotics</span>
+            </div>
+
+            <div class="project-block">
+              <h4>Overview</h4>
+              <p>
+                Developed an autonomous robot capable of following a line and interacting with its environment.
+                The project combined sensor integration, motor control and structured debugging.
+              </p>
+            </div>
+
+            <div class="project-block">
+              <h4>What I worked on</h4>
+              <ul>
+                <li>Integrated multiple sensors such as ToF sensors, IMU and line sensors</li>
+                <li>Worked on robot positioning and turn control</li>
+                <li>Implemented logic for movement and feedback-based correction</li>
+                <li>Tested the system iteratively and improved reliability</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4>What I learned</h4>
+              <p>
+                I learned how difficult real-world sensor fusion can be compared to theory. Small errors,
+                drift and noisy data can strongly affect the behavior of a robot, so structured testing
+                and step-by-step debugging became essential.
+              </p>
+            </div>
+
+            <div class="tag-list">
+              <span class="tag">Arduino</span>
+              <span class="tag">C++</span>
+              <span class="tag">PID Control</span>
+              <span class="tag">IMU</span>
+              <span class="tag">ToF Sensors</span>
+              <span class="tag">Debugging</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">Computer Vision Distance Estimation</h3>
+                <p class="project-subtitle">Machine Learning · Image Features · Regression</p>
+              </div>
+              <span class="project-badge">ML / Vision</span>
+            </div>
+
+            <div class="project-block">
+              <h4>Overview</h4>
+              <p>
+                Built machine learning models to estimate object distance directly from images. The project
+                focused on feature engineering, model comparison and improving prediction performance.
+              </p>
+            </div>
+
+            <div class="project-block">
+              <h4>What I worked on</h4>
+              <ul>
+                <li>Prepared image data and extracted useful visual features</li>
+                <li>Tested different regression approaches and model combinations</li>
+                <li>Worked with HOG, raw image features and ensemble strategies</li>
+                <li>Evaluated models using validation metrics and iterative tuning</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4>What I learned</h4>
+              <p>
+                I learned how important representation is in machine learning. Often, performance does not
+                only depend on the model itself, but on how the information is extracted and structured before training.
+              </p>
+            </div>
+
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">HOG Features</span>
+              <span class="tag">Model Tuning</span>
+              <span class="tag">Regression</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">Football Set-Piece Data Analysis</h3>
+                <p class="project-subtitle">Data Analysis · Python · Event & Tracking Data</p>
+              </div>
+              <span class="project-badge">Analytics</span>
+            </div>
+
+            <div class="project-block">
+              <h4>Overview</h4>
+              <p>
+                Analyzed football set pieces using event and tracking data to understand positioning,
+                timing and tactical behavior in structured game situations.
+              </p>
+            </div>
+
+            <div class="project-block">
+              <h4>What I worked on</h4>
+              <ul>
+                <li>Processed event and tracking datasets</li>
+                <li>Built scripts to analyze corners, free kicks and goal kicks</li>
+                <li>Visualized player positions and action patterns</li>
+                <li>Derived structured insights from match situations</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4>What I learned</h4>
+              <p>
+                I learned how to convert large, raw datasets into interpretable insights. A major part of
+                the work was not only coding, but deciding what to measure and how to present it clearly.
+              </p>
+            </div>
+
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Visualization</span>
+              <span class="tag">JSON</span>
+              <span class="tag">Tracking Data</span>
+              <span class="tag">Tactical Analysis</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div>
+                <h3 class="project-title">Structural Mechanics Work at ARIS</h3>
+                <p class="project-subtitle">Mechanics · Engineering Practice · Problem Solving</p>
+              </div>
+              <span class="project-badge">Mechanics</span>
+            </div>
+
+            <div class="project-block">
+              <h4>Overview</h4>
+              <p>
+                Gained practical exposure to structural mechanics in a real engineering environment and
+                strengthened my understanding of how theoretical concepts are used in practice.
+              </p>
+            </div>
+
+            <div class="project-block">
+              <h4>What I worked on</h4>
+              <ul>
+                <li>Supported engineering tasks in structural mechanics</li>
+                <li>Worked in a technical and collaborative setting</li>
+                <li>Applied analytical thinking to practical problems</li>
+                <li>Improved engineering communication and workflow understanding</li>
+              </ul>
+            </div>
+
+            <div class="project-block">
+              <h4>What I learned</h4>
+              <p>
+                I learned that engineering work is not only about solving equations, but also about
+                clarity, communication and making technically sound decisions under practical constraints.
+              </p>
+            </div>
+
+            <div class="tag-list">
+              <span class="tag">Structural Mechanics</span>
+              <span class="tag">Engineering Practice</span>
+              <span class="tag">Technical Communication</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <section class="grid-2">
-      <div class="card" id="education">
-        <h2 class="section-title">Education</h2>
-
-        <div class="entry">
-          <h3>ETH Zurich</h3>
-          <p><strong>Bachelor of Science in Mechanical Engineering</strong></p>
-          <p class="muted">September 2023 – present</p>
-          <p>Focus in design, mechanics, and manufacturing.</p>
+    <section id="skills">
+      <div class="panel section-panel">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Technical Overview</div>
+            <h2 class="section-title">Skills Snapshot</h2>
+          </div>
         </div>
 
-        <div class="entry">
-          <h3>MNG Rämibühl Zurich</h3>
-          <p><strong>Matura</strong> · Focus in Applied Mathematics &amp; Physics</p>
-          <p class="muted">August 2019 – July 2023</p>
+        <div class="skills-layout">
+          <div class="skills-box">
+            <h3>Technical Skills</h3>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">C++</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Mechanics</span>
+              <span class="tag">Control Systems</span>
+              <span class="tag">Robotics</span>
+              <span class="tag">Thermodynamics</span>
+              <span class="tag">Fluid Dynamics</span>
+              <span class="tag">Simulation</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </div>
+
+          <div class="skills-box">
+            <h3>Languages</h3>
+            <div class="tag-list">
+              <span class="tag">German</span>
+              <span class="tag">English</span>
+              <span class="tag">Tamil</span>
+              <span class="tag">French</span>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="card" id="skills">
-        <h2 class="section-title">Skills</h2>
+    <section id="background">
+      <div class="two-col">
+        <div class="panel section-panel">
+          <div class="section-header">
+            <div>
+              <div class="section-label">Experience</div>
+              <h2 class="section-title">Work</h2>
+            </div>
+          </div>
 
-        <h3>Technical Skills</h3>
-        <div class="tag-list" style="margin-bottom: 24px;">
-          <span class="tag">Python</span>
-          <span class="tag">C++</span>
-          <span class="tag">Mechanics</span>
-          <span class="tag">Control Systems</span>
-          <span class="tag">Fluid Dynamics</span>
-          <span class="tag">Thermodynamics</span>
-          <span class="tag">Machine Learning</span>
-          <span class="tag">Microsoft Office</span>
+          <div class="entry">
+            <h3>Structural Mechanics Engineer</h3>
+            <div class="meta">ARIS · Freelance · October 2024 – Present · Zurich</div>
+            <p>
+              Contributing to structural mechanics tasks in a practical engineering environment and gaining
+              hands-on experience with analytical and collaborative technical work.
+            </p>
+          </div>
+
+          <div class="entry">
+            <h3>Teacher Assistant</h3>
+            <div class="meta">Sekundarschule Herzogenmühle · Part-time · August 2025 – Present</div>
+            <p>
+              Supporting students in class and explaining concepts clearly, which strengthened my ability
+              to communicate technical ideas in a structured and understandable way.
+            </p>
+          </div>
         </div>
 
-        <h3>Languages</h3>
-        <div class="tag-list">
-          <span class="tag">German</span>
-          <span class="tag">Tamil</span>
-          <span class="tag">English</span>
-          <span class="tag">French</span>
+        <div class="panel section-panel">
+          <div class="section-header">
+            <div>
+              <div class="section-label">Education</div>
+              <h2 class="section-title">Academic Background</h2>
+            </div>
+          </div>
+
+          <div class="entry">
+            <h3>ETH Zurich</h3>
+            <div class="meta">BSc Mechanical Engineering · September 2023 – Present</div>
+            <p>Focus on design, mechanics, manufacturing and technical foundations of engineering.</p>
+          </div>
+
+          <div class="entry">
+            <h3>MNG Rämibühl Zurich</h3>
+            <div class="meta">Matura · Applied Mathematics & Physics · 2019 – 2023</div>
+            <p>Strong academic background in mathematics, physics and analytical thinking.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="card">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-links">
-          <p><strong>Email:</strong> <a href="mailto:sjegatheesan@ethz.ch">sjegatheesan@ethz.ch</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shusshmithan-jegatheesan-001407330/" target="_blank">View LinkedIn Profile</a></p>
-          <p><strong>Portfolio:</strong> <a href="https://shushmithanjegatheesan.github.io/sjegatheesan.github.io/" target="_blank">GitHub Pages Website</a></p>
+      <div class="panel section-panel">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Get in Touch</div>
+            <h2 class="section-title">Contact</h2>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:sjegatheesan@ethz.ch">sjegatheesan@ethz.ch</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/shusshmithan-jegatheesan-001407330/" target="_blank">View Profile</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Website</h3>
+            <p><a href="https://shushmithanjegatheesan.github.io/sjegatheesan.github.io/" target="_blank">GitHub Pages Portfolio</a></p>
+          </div>
         </div>
       </div>
     </section>
