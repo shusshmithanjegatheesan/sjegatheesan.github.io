@@ -36,11 +36,11 @@
       font-family: Inter, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 15% 20%, rgba(78, 161, 255, 0.13), transparent 22%),
-        radial-gradient(circle at 85% 18%, rgba(89, 240, 255, 0.10), transparent 20%),
-        radial-gradient(circle at 75% 80%, rgba(95, 242, 174, 0.08), transparent 22%),
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        radial-gradient(circle at 15% 20%, rgba(99, 179, 255, 0.16), transparent 22%),
+        radial-gradient(circle at 85% 18%, rgba(124, 247, 255, 0.12), transparent 20%),
+        radial-gradient(circle at 75% 80%, rgba(126, 247, 191, 0.08), transparent 22%),
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
         var(--bg);
       background-size: auto, auto, auto, 42px 42px, 42px 42px, auto;
       line-height: 1.6;
@@ -60,9 +60,9 @@
       position: sticky;
       top: 0;
       z-index: 999;
-      background: rgba(7, 17, 31, 0.82);
+      background: rgba(15, 27, 45, 0.82);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-inner {
@@ -97,7 +97,7 @@
     }
 
     .nav-links a {
-      color: #c9d4e5;
+      color: #d2dced;
       font-size: 14px;
       font-weight: 600;
       transition: 0.2s ease;
@@ -131,13 +131,19 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(78, 161, 255, 0.06), transparent 35%, rgba(95, 242, 174, 0.04));
+      background: linear-gradient(
+        135deg,
+        rgba(99, 179, 255, 0.07),
+        transparent 35%,
+        rgba(126, 247, 191, 0.04)
+      );
       pointer-events: none;
     }
 
     .hero-left,
-    .hero-right {
-      padding: 34px;
+    .hero-right,
+    .section-panel {
+      padding: 32px;
     }
 
     .eyebrow {
@@ -146,9 +152,9 @@
       gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(89, 240, 255, 0.22);
-      background: rgba(89, 240, 255, 0.08);
-      color: #b8f7ff;
+      border: 1px solid rgba(124, 247, 255, 0.22);
+      background: rgba(124, 247, 255, 0.08);
+      color: #d4fbff;
       font-size: 13px;
       font-weight: 700;
       margin-bottom: 20px;
@@ -157,7 +163,7 @@
     }
 
     h1 {
-      font-size: 58px;
+      font-size: 56px;
       line-height: 1.02;
       margin-bottom: 18px;
       color: white;
@@ -165,7 +171,7 @@
     }
 
     .hero-subtext {
-      color: #c3cfdf;
+      color: #d7e1ef;
       font-size: 18px;
       max-width: 760px;
       margin-bottom: 26px;
@@ -189,13 +195,13 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue), #2b6df6);
+      background: linear-gradient(135deg, var(--blue), #4b8cf3);
       color: white;
       box-shadow: 0 10px 24px rgba(43, 109, 246, 0.24);
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
       color: var(--text);
     }
 
@@ -213,8 +219,8 @@
     .stat-card {
       padding: 16px;
       border-radius: 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .stat-card h3 {
@@ -236,7 +242,7 @@
       border-radius: 18px;
       margin: 0 auto 20px auto;
       display: block;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
       background: #101827;
     }
 
@@ -254,8 +260,8 @@
     .mini-item {
       padding: 14px 16px;
       border-radius: 14px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .mini-item .label {
@@ -278,10 +284,6 @@
 
     section {
       margin-top: 28px;
-    }
-
-    .section-panel {
-      padding: 30px;
     }
 
     .section-header {
@@ -314,91 +316,15 @@
 
     .about-text {
       max-width: 920px;
-      color: #cfdae8;
+      color: #dbe5f2;
       font-size: 17px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
-
-    .project-card {
-      padding: 24px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-      transition: 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(89, 240, 255, 0.20);
-    }
-
-    .project-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: start;
-      margin-bottom: 14px;
-    }
-
-    .project-title {
-      font-size: 22px;
-      color: white;
-      margin-bottom: 6px;
-    }
-
-    .project-subtitle {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .project-badge {
-      white-space: nowrap;
-      padding: 7px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      color: #d9f8ff;
-      background: rgba(89, 240, 255, 0.08);
-      border: 1px solid rgba(89, 240, 255, 0.18);
-    }
-
-    .project-block {
-      margin-top: 14px;
-    }
-
-    .project-block h4 {
-      font-size: 13px;
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: 0.9px;
-      margin-bottom: 6px;
-    }
-
-    .project-block p,
-    .project-block ul {
-      color: #d4deec;
-      font-size: 15px;
-    }
-
-    .project-block ul {
-      padding-left: 18px;
-    }
-
-    .project-block li {
-      margin-bottom: 6px;
     }
 
     .tag-list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .tag {
@@ -406,65 +332,153 @@
       border-radius: 999px;
       font-size: 13px;
       font-weight: 700;
-      background: rgba(78, 161, 255, 0.08);
-      border: 1px solid rgba(78, 161, 255, 0.18);
-      color: #d8eaff;
+      background: rgba(99, 179, 255, 0.10);
+      border: 1px solid rgba(99, 179, 255, 0.24);
+      color: #e3efff;
     }
 
-    .skills-layout {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
+    .timeline {
+      position: relative;
+      padding: 30px 0 10px;
     }
 
-    .skills-box {
-      padding: 22px;
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        rgba(124,247,255,0.15),
+        rgba(99,179,255,0.75),
+        rgba(126,247,191,0.15)
+      );
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      margin-bottom: 28px;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      padding-right: 34px;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+      padding-left: 34px;
+    }
+
+    .timeline-point {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      color: var(--text);
+      text-align: left;
+      padding: 18px 20px;
+      cursor: pointer;
+      position: relative;
+      transition: 0.2s ease;
+      font: inherit;
     }
 
-    .skills-box h3 {
+    .timeline-point:hover {
+      transform: translateY(-2px);
+      border-color: rgba(124,247,255,0.28);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .timeline-item.left .timeline-point::after,
+    .timeline-item.right .timeline-point::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      width: 16px;
+      height: 2px;
+      background: rgba(99,179,255,0.65);
+    }
+
+    .timeline-item.left .timeline-point::after {
+      right: -16px;
+    }
+
+    .timeline-item.right .timeline-point::after {
+      left: -16px;
+    }
+
+    .dot {
+      position: absolute;
+      top: 18px;
+      width: 16px;
+      height: 16px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      border-radius: 50%;
+      box-shadow: 0 0 18px rgba(124,247,255,0.7);
+    }
+
+    .timeline-item.left .dot {
+      right: -42px;
+    }
+
+    .timeline-item.right .dot {
+      left: -42px;
+    }
+
+    .timeline-summary h3 {
+      font-size: 21px;
       color: white;
-      margin-bottom: 14px;
-      font-size: 20px;
-    }
-
-    .skills-box p {
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-    }
-
-    .entry {
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-
-    .entry:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .entry h3 {
-      color: white;
-      font-size: 20px;
       margin-bottom: 4px;
     }
 
-    .entry .meta {
+    .timeline-summary p {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 8px;
     }
 
-    .entry p {
-      color: #d3deeb;
+    .timeline-detail {
+      display: none;
+      margin-top: 12px;
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .timeline-detail h4 {
+      margin-bottom: 8px;
+      margin-top: 14px;
+      color: var(--cyan);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .timeline-detail h4:first-child {
+      margin-top: 0;
+    }
+
+    .timeline-detail p,
+    .timeline-detail li {
+      color: #d9e3ef;
+      font-size: 15px;
+    }
+
+    .timeline-detail ul {
+      padding-left: 18px;
+    }
+
+    .timeline-detail li {
+      margin-bottom: 6px;
+    }
+
+    .timeline-item.active .timeline-detail {
+      display: block;
     }
 
     .contact-grid {
@@ -476,8 +490,8 @@
     .contact-card {
       padding: 22px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .contact-card h3 {
@@ -505,9 +519,6 @@
 
     @media (max-width: 1020px) {
       .hero-grid,
-      .projects-grid,
-      .skills-layout,
-      .two-col,
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -518,6 +529,34 @@
 
       .hero-stats {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .timeline::before {
+        left: 18px;
+        transform: none;
+      }
+
+      .timeline-item,
+      .timeline-item.left,
+      .timeline-item.right {
+        width: 100%;
+        left: 0;
+        padding-left: 52px;
+        padding-right: 0;
+      }
+
+      .timeline-item.left .dot,
+      .timeline-item.right .dot {
+        left: -42px;
+        right: auto;
+      }
+
+      .timeline-item.left .timeline-point::after,
+      .timeline-item.right .timeline-point::after {
+        left: -16px;
+        right: auto;
       }
     }
 
@@ -559,9 +598,7 @@
 
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#background">Background</a>
+        <a href="#timeline">Timeline</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -571,12 +608,12 @@
     <div class="container hero-grid">
 
       <div class="panel hero-left">
-        <div class="eyebrow">ETH Zurich · Mechanical Engineering · Portfolio</div>
-        <h1>Building engineering projects that connect theory, code and hands-on problem solving.</h1>
+        <div class="eyebrow">ETH Zurich · Mechanical Engineering · Engineering Portfolio</div>
+        <h1>Engineering through projects, learning and hands-on technical work.</h1>
         <p class="hero-subtext">
           I am a Mechanical Engineering student at ETH Zurich with a strong interest in robotics,
-          mechanics, control, simulation and technical development. I enjoy working on projects where
-          analytical thinking meets real implementation — from coding and modelling to testing and design.
+          mechanics, control, simulation and technical development. I enjoy understanding systems deeply,
+          solving real problems and learning through implementation.
         </p>
 
         <div class="button-row">
@@ -588,16 +625,16 @@
 
         <div class="hero-stats">
           <div class="stat-card">
+            <h3>Education</h3>
+            <p>Academic path and technical foundations</p>
+          </div>
+          <div class="stat-card">
             <h3>Projects</h3>
-            <p>Engineering, coding and applied technical work</p>
+            <p>Hands-on engineering and coding experience</p>
           </div>
           <div class="stat-card">
-            <h3>Focus</h3>
-            <p>Mechanics, control, robotics and manufacturing</p>
-          </div>
-          <div class="stat-card">
-            <h3>Approach</h3>
-            <p>Structured, hands-on and problem-solving oriented</p>
+            <h3>Growth</h3>
+            <p>What I learned along the way</p>
           </div>
         </div>
       </div>
@@ -642,303 +679,227 @@
         </div>
 
         <p class="about-text">
-          I am especially interested in technical projects where I can understand a system deeply and
-          then improve it through analysis, design and implementation. What motivates me most is not
-          only learning theory, but using it in a real engineering context. That is why I enjoy working
-          on projects involving modelling, programming, mechanics, testing and iterative problem solving.
-          I want this portfolio to show not only what I studied, but also how I approach technical work
-          and what I learned from building things.
+          I am especially interested in technical projects where I can understand a system deeply and then
+          improve it through analysis, design and implementation. What motivates me most is not only learning
+          theory, but using it in a real engineering context. This portfolio is meant to show my path in a
+          more interactive way: what I studied, what I worked on, and what I learned from each step.
         </p>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="timeline">
       <div class="panel section-panel">
         <div class="section-header">
           <div>
-            <div class="section-label">Main Section</div>
-            <h2 class="section-title">Projects</h2>
+            <div class="section-label">Interactive Overview</div>
+            <h2 class="section-title">Timeline</h2>
           </div>
           <p class="section-description">
-            A selection of projects that reflect my technical interests and how I work: understanding systems,
-            solving concrete problems, and learning new tools through implementation.
+            Click on a point to explore my academic path, work experience and technical projects in more detail.
           </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="timeline">
 
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3 class="project-title">Autonomous Line-Following Robot</h3>
-                <p class="project-subtitle">Robotics · Sensors · Control · Arduino</p>
+          <div class="timeline-item left">
+            <button class="timeline-point" onclick="toggleTimeline(this)">
+              <span class="dot"></span>
+              <div class="timeline-summary">
+                <h3>ETH Zurich</h3>
+                <p>BSc Mechanical Engineering · 2023 – Present</p>
               </div>
-              <span class="project-badge">Robotics</span>
-            </div>
+            </button>
+            <div class="timeline-detail">
+              <h4>Academic Focus</h4>
+              <p>Mechanical Engineering with focus on design, mechanics and manufacturing.</p>
 
-            <div class="project-block">
-              <h4>Overview</h4>
+              <h4>Relevant Courses</h4>
+              <div class="tag-list">
+                <span class="tag">Mechanics</span>
+                <span class="tag">Thermodynamics</span>
+                <span class="tag">Fluid Dynamics</span>
+                <span class="tag">Control Systems</span>
+                <span class="tag">Machine Design</span>
+                <span class="tag">Machine Learning</span>
+              </div>
+
+              <h4>What I developed here</h4>
               <p>
-                Developed an autonomous robot capable of following a line and interacting with its environment.
-                The project combined sensor integration, motor control and structured debugging.
+                Strong analytical thinking, structured technical problem solving, and the ability
+                to connect theory with practical engineering applications.
               </p>
             </div>
+          </div>
 
-            <div class="project-block">
+          <div class="timeline-item left">
+            <button class="timeline-point" onclick="toggleTimeline(this)">
+              <span class="dot"></span>
+              <div class="timeline-summary">
+                <h3>MNG Rämibühl Zurich</h3>
+                <p>Matura · Applied Mathematics & Physics · 2019 – 2023</p>
+              </div>
+            </button>
+            <div class="timeline-detail">
+              <h4>Focus</h4>
+              <p>Strong foundation in mathematics and physics.</p>
+
+              <h4>What I learned</h4>
+              <p>
+                Built the academic base for engineering studies and developed an early interest in
+                technical reasoning, logical thinking and quantitative problem solving.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <button class="timeline-point" onclick="toggleTimeline(this)">
+              <span class="dot"></span>
+              <div class="timeline-summary">
+                <h3>ARIS</h3>
+                <p>Structural Mechanics Engineer · 2024 – Present</p>
+              </div>
+            </button>
+            <div class="timeline-detail">
+              <h4>What I worked on</h4>
+              <p>
+                Supported structural mechanics work in a practical engineering environment and contributed
+                to technical tasks requiring analytical thinking and collaboration.
+              </p>
+
+              <h4>What I learned</h4>
+              <div class="tag-list">
+                <span class="tag">Structural Mechanics</span>
+                <span class="tag">Engineering Workflow</span>
+                <span class="tag">Technical Communication</span>
+                <span class="tag">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <button class="timeline-point" onclick="toggleTimeline(this)">
+              <span class="dot"></span>
+              <div class="timeline-summary">
+                <h3>Teacher Assistant</h3>
+                <p>Sekundarschule Herzogenmühle · 2025 – Present</p>
+              </div>
+            </button>
+            <div class="timeline-detail">
+              <h4>What I did</h4>
+              <p>
+                Supported students in class and explained topics in a clear and structured way.
+              </p>
+
+              <h4>What I learned</h4>
+              <div class="tag-list">
+                <span class="tag">Communication</span>
+                <span class="tag">Structured Explanation</span>
+                <span class="tag">Responsibility</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <button class="timeline-point" onclick="toggleTimeline(this)">
+              <span class="dot"></span>
+              <div class="timeline-summary">
+                <h3>Autonomous Robot Project</h3>
+                <p>Robotics · Sensors · Control</p>
+              </div>
+            </button>
+            <div class="timeline-detail">
+              <h4>What the project was about</h4>
+              <p>
+                Developed an autonomous line-following robot using sensors, control logic and iterative testing.
+              </p>
+
               <h4>What I worked on</h4>
               <ul>
-                <li>Integrated multiple sensors such as ToF sensors, IMU and line sensors</li>
+                <li>Integrated sensors such as ToF sensors, IMU and line sensors</li>
                 <li>Worked on robot positioning and turn control</li>
-                <li>Implemented logic for movement and feedback-based correction</li>
-                <li>Tested the system iteratively and improved reliability</li>
+                <li>Implemented movement logic and correction strategies</li>
+                <li>Improved reliability through repeated testing and debugging</li>
               </ul>
-            </div>
 
-            <div class="project-block">
               <h4>What I learned</h4>
-              <p>
-                I learned how difficult real-world sensor fusion can be compared to theory. Small errors,
-                drift and noisy data can strongly affect the behavior of a robot, so structured testing
-                and step-by-step debugging became essential.
-              </p>
-            </div>
-
-            <div class="tag-list">
-              <span class="tag">Arduino</span>
-              <span class="tag">C++</span>
-              <span class="tag">PID Control</span>
-              <span class="tag">IMU</span>
-              <span class="tag">ToF Sensors</span>
-              <span class="tag">Debugging</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3 class="project-title">Computer Vision Distance Estimation</h3>
-                <p class="project-subtitle">Machine Learning · Image Features · Regression</p>
+              <div class="tag-list">
+                <span class="tag">Arduino</span>
+                <span class="tag">Sensor Integration</span>
+                <span class="tag">PID Control</span>
+                <span class="tag">Debugging</span>
+                <span class="tag">System Thinking</span>
               </div>
-              <span class="project-badge">ML / Vision</span>
             </div>
+          </div>
 
-            <div class="project-block">
-              <h4>Overview</h4>
+          <div class="timeline-item right">
+            <button class="timeline-point" onclick="toggleTimeline(this)">
+              <span class="dot"></span>
+              <div class="timeline-summary">
+                <h3>Distance Estimation Project</h3>
+                <p>Computer Vision · Machine Learning</p>
+              </div>
+            </button>
+            <div class="timeline-detail">
+              <h4>What the project was about</h4>
               <p>
-                Built machine learning models to estimate object distance directly from images. The project
-                focused on feature engineering, model comparison and improving prediction performance.
+                Built machine learning models for estimating distances from images and improved performance
+                through feature engineering and model tuning.
               </p>
-            </div>
 
-            <div class="project-block">
               <h4>What I worked on</h4>
               <ul>
-                <li>Prepared image data and extracted useful visual features</li>
-                <li>Tested different regression approaches and model combinations</li>
-                <li>Worked with HOG, raw image features and ensemble strategies</li>
-                <li>Evaluated models using validation metrics and iterative tuning</li>
+                <li>Prepared image data and extracted useful features</li>
+                <li>Tested different regression models and stacking methods</li>
+                <li>Worked with HOG features and model optimization</li>
+                <li>Compared approaches using validation metrics</li>
               </ul>
-            </div>
 
-            <div class="project-block">
               <h4>What I learned</h4>
-              <p>
-                I learned how important representation is in machine learning. Often, performance does not
-                only depend on the model itself, but on how the information is extracted and structured before training.
-              </p>
-            </div>
-
-            <div class="tag-list">
-              <span class="tag">Python</span>
-              <span class="tag">scikit-learn</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">HOG Features</span>
-              <span class="tag">Model Tuning</span>
-              <span class="tag">Regression</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3 class="project-title">Football Set-Piece Data Analysis</h3>
-                <p class="project-subtitle">Data Analysis · Python · Event & Tracking Data</p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">scikit-learn</span>
+                <span class="tag">HOG Features</span>
+                <span class="tag">Regression</span>
+                <span class="tag">Model Evaluation</span>
               </div>
-              <span class="project-badge">Analytics</span>
             </div>
+          </div>
 
-            <div class="project-block">
-              <h4>Overview</h4>
+          <div class="timeline-item right">
+            <button class="timeline-point" onclick="toggleTimeline(this)">
+              <span class="dot"></span>
+              <div class="timeline-summary">
+                <h3>Football Data Analysis Project</h3>
+                <p>Data Analysis · Event & Tracking Data</p>
+              </div>
+            </button>
+            <div class="timeline-detail">
+              <h4>What the project was about</h4>
               <p>
-                Analyzed football set pieces using event and tracking data to understand positioning,
-                timing and tactical behavior in structured game situations.
+                Analyzed football set pieces using event and tracking data to study positioning,
+                timing and tactical behavior.
               </p>
-            </div>
 
-            <div class="project-block">
               <h4>What I worked on</h4>
               <ul>
-                <li>Processed event and tracking datasets</li>
-                <li>Built scripts to analyze corners, free kicks and goal kicks</li>
-                <li>Visualized player positions and action patterns</li>
-                <li>Derived structured insights from match situations</li>
+                <li>Processed event and tracking data from multiple matches</li>
+                <li>Built Python scripts for structured analysis</li>
+                <li>Visualized player positions and action sequences</li>
+                <li>Derived interpretable tactical insights from raw datasets</li>
               </ul>
-            </div>
 
-            <div class="project-block">
               <h4>What I learned</h4>
-              <p>
-                I learned how to convert large, raw datasets into interpretable insights. A major part of
-                the work was not only coding, but deciding what to measure and how to present it clearly.
-              </p>
-            </div>
-
-            <div class="tag-list">
-              <span class="tag">Python</span>
-              <span class="tag">Data Analysis</span>
-              <span class="tag">Visualization</span>
-              <span class="tag">JSON</span>
-              <span class="tag">Tracking Data</span>
-              <span class="tag">Tactical Analysis</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <div>
-                <h3 class="project-title">Structural Mechanics Work at ARIS</h3>
-                <p class="project-subtitle">Mechanics · Engineering Practice · Problem Solving</p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Visualization</span>
+                <span class="tag">JSON</span>
+                <span class="tag">Tracking Data</span>
               </div>
-              <span class="project-badge">Mechanics</span>
-            </div>
-
-            <div class="project-block">
-              <h4>Overview</h4>
-              <p>
-                Gained practical exposure to structural mechanics in a real engineering environment and
-                strengthened my understanding of how theoretical concepts are used in practice.
-              </p>
-            </div>
-
-            <div class="project-block">
-              <h4>What I worked on</h4>
-              <ul>
-                <li>Supported engineering tasks in structural mechanics</li>
-                <li>Worked in a technical and collaborative setting</li>
-                <li>Applied analytical thinking to practical problems</li>
-                <li>Improved engineering communication and workflow understanding</li>
-              </ul>
-            </div>
-
-            <div class="project-block">
-              <h4>What I learned</h4>
-              <p>
-                I learned that engineering work is not only about solving equations, but also about
-                clarity, communication and making technically sound decisions under practical constraints.
-              </p>
-            </div>
-
-            <div class="tag-list">
-              <span class="tag">Structural Mechanics</span>
-              <span class="tag">Engineering Practice</span>
-              <span class="tag">Technical Communication</span>
-              <span class="tag">Problem Solving</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="panel section-panel">
-        <div class="section-header">
-          <div>
-            <div class="section-label">Technical Overview</div>
-            <h2 class="section-title">Skills Snapshot</h2>
-          </div>
-        </div>
-
-        <div class="skills-layout">
-          <div class="skills-box">
-            <h3>Technical Skills</h3>
-            <div class="tag-list">
-              <span class="tag">Python</span>
-              <span class="tag">C++</span>
-              <span class="tag">Arduino</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Data Analysis</span>
-              <span class="tag">Mechanics</span>
-              <span class="tag">Control Systems</span>
-              <span class="tag">Robotics</span>
-              <span class="tag">Thermodynamics</span>
-              <span class="tag">Fluid Dynamics</span>
-              <span class="tag">Simulation</span>
-              <span class="tag">Problem Solving</span>
             </div>
           </div>
 
-          <div class="skills-box">
-            <h3>Languages</h3>
-            <div class="tag-list">
-              <span class="tag">German</span>
-              <span class="tag">English</span>
-              <span class="tag">Tamil</span>
-              <span class="tag">French</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="background">
-      <div class="two-col">
-        <div class="panel section-panel">
-          <div class="section-header">
-            <div>
-              <div class="section-label">Experience</div>
-              <h2 class="section-title">Work</h2>
-            </div>
-          </div>
-
-          <div class="entry">
-            <h3>Structural Mechanics Engineer</h3>
-            <div class="meta">ARIS · Freelance · October 2024 – Present · Zurich</div>
-            <p>
-              Contributing to structural mechanics tasks in a practical engineering environment and gaining
-              hands-on experience with analytical and collaborative technical work.
-            </p>
-          </div>
-
-          <div class="entry">
-            <h3>Teacher Assistant</h3>
-            <div class="meta">Sekundarschule Herzogenmühle · Part-time · August 2025 – Present</div>
-            <p>
-              Supporting students in class and explaining concepts clearly, which strengthened my ability
-              to communicate technical ideas in a structured and understandable way.
-            </p>
-          </div>
-        </div>
-
-        <div class="panel section-panel">
-          <div class="section-header">
-            <div>
-              <div class="section-label">Education</div>
-              <h2 class="section-title">Academic Background</h2>
-            </div>
-          </div>
-
-          <div class="entry">
-            <h3>ETH Zurich</h3>
-            <div class="meta">BSc Mechanical Engineering · September 2023 – Present</div>
-            <p>Focus on design, mechanics, manufacturing and technical foundations of engineering.</p>
-          </div>
-
-          <div class="entry">
-            <h3>MNG Rämibühl Zurich</h3>
-            <div class="meta">Matura · Applied Mathematics & Physics · 2019 – 2023</div>
-            <p>Strong academic background in mathematics, physics and analytical thinking.</p>
-          </div>
         </div>
       </div>
     </section>
@@ -976,6 +937,13 @@
   <footer>
     © 2026 Shushmithan Jegatheesan
   </footer>
+
+  <script>
+    function toggleTimeline(button) {
+      const item = button.parentElement;
+      item.classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>
